@@ -19,9 +19,6 @@ jobs:
       with:
         node-version: '14'  # Your project requires Node 14
 
-    - name: Rename package-sample.json to package.json
-      run: mv package-sample.json package.json
-
     - name: Install Dependencies
       run: npm install
 
