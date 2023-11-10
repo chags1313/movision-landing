@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercise Program Software</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --primary-color: #6f61ef; /* Your primary color */
+        --secondary-color: #39d2c0; /* Your secondary color */
+        --tertiary-color: #ee8b60; /* Your tertiary color */
+        --text-primary: #15161e; /* Your primary text color */
+        --text-secondary: #606a85; /* Your secondary text color */
+        --background-primary: #f1f4f8; /* Your primary background color */
+        --background-secondary: #ffffff; /* Your secondary background color */
+    }
+    body {
+        font-family: 'Open Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--background-primary);
+        color: var(--text-primary);
+    }
+    header {
+        background-color: var(--primary-color);
+        color: var(--background-secondary);
+        padding: 1rem;
+        text-align: center;
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    nav a {
+        color: var(--background-secondary);
+        text-decoration: none;
+        margin: 0 1rem;
+    }
+    .hero {
+        background-color: var(--secondary-color);
+        padding: 2rem;
+        color: var(--background-secondary);
+        text-align: center;
+    }
+    .content-section {
+        padding: 2rem;
+        background-color: var(--background-secondary);
+    }
+    footer {
+        background-color: var(--tertiary-color);
+        color: var(--background-secondary);
+        text-align: center;
+        padding: 1rem;
+    }
+    /* Responsive styling */
+    @media (max-width: 768px) {
+        nav {
+            flex-direction: column;
+        }
+        nav a {
+            margin: 0.5rem 0;
+        }
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1>Band Connect</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Connect</a>
+        <a href="#">About Us</a>
+        <a href="#">Provider Login</a>
+    </nav>
+</header>
+<div class="hero">
+    <h2>Extending the high-quality in-clinic MSK rehabilitation experience into the patient's home.</h2>
+    <p>Band Connect provides a medical-grade and condition-specific platform that augments the clinician workflow by extending the in-clinic MSK rehabilitation experience into the patient's home - leading to higher quality personalized treatment and increased adherence with enhanced economics and reimbursement for the clinic.</p>
+</div>
+<div class="content-section">
+    <h3>The Problem</h3>
+    <p>Only 35% of physical therapy patients fully adhere to their plans of care. We can do better.</p>
+    <!-- Add more content sections as needed -->
+</div>
+<footer>
+    <p>Copyright © 2022 Band Connect Inc.</p>
+    <!-- Add your social media links -->
+</footer>
+</body>
+</html>
