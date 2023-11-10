@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -17,17 +17,20 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14'  # Set this to your Node.js version
+        node-version: '14'  # Your project requires Node 14
+
+    - name: Rename package-sample.json to package.json
+      run: mv package-sample.json package.json
 
     - name: Install Dependencies
       run: npm install
 
-    - name: Build
-      run: npm run build  # Replace with your actual build command
+    - name: Build Project
+      run: npm run build  # Replace 'build' with your actual build script
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.1.5
       with:
-        branch: gh-pages  # The branch the action should deploy to.
-        folder: dist      # The folder the action should deploy.
+        branch: gh-pages
+        folder: dist  # Replace with your build output directory
 
