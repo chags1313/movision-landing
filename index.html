@@ -3,90 +3,149 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Exercise Program Software</title>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+<title>Band Connect - Home Exercise Program</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
     :root {
-        --primary-color: #6f61ef; /* Your primary color */
-        --secondary-color: #39d2c0; /* Your secondary color */
-        --tertiary-color: #ee8b60; /* Your tertiary color */
-        --text-primary: #15161e; /* Your primary text color */
-        --text-secondary: #606a85; /* Your secondary text color */
-        --background-primary: #f1f4f8; /* Your primary background color */
-        --background-secondary: #ffffff; /* Your secondary background color */
+        --primary-color: #6f61ef;
+        --secondary-color: #39d2c0;
+        --tertiary-color: #ee8b60;
+        --text-color: #15161e;
+        --text-light: #606a85;
+        --background-light: #ffffff;
+        --background-dark: #15161e;
+        --btn-hover: #575ed8;
     }
-    body {
-        font-family: 'Open Sans', sans-serif;
+    
+    * {
+        box-sizing: border-box;
         margin: 0;
         padding: 0;
-        background-color: var(--background-primary);
-        color: var(--text-primary);
     }
+    
+    body {
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--background-light);
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
     header {
-        background-color: var(--primary-color);
-        color: var(--background-secondary);
-        padding: 1rem;
-        text-align: center;
+        background: var(--primary-color);
+        padding: 1rem 0;
     }
-    nav {
+    
+    .nav-bar {
         display: flex;
-        justify-content: center;
-        margin-bottom: 1rem;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
-    nav a {
-        color: var(--background-secondary);
+    
+    .nav-brand {
+        color: var(--background-light);
         text-decoration: none;
-        margin: 0 1rem;
+        font-size: 2rem;
+        font-weight: bold;
     }
+    
+    .nav-menu {
+        list-style: none;
+        display: flex;
+    }
+    
+    .nav-item {
+        padding: 0 1rem;
+    }
+    
+    .nav-link {
+        color: var(--background-light);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    
     .hero {
-        background-color: var(--secondary-color);
-        padding: 2rem;
-        color: var(--background-secondary);
+        background-image: url('path-to-your-hero-background.jpg');
+        background-size: cover;
+        background-position: center;
+        color: var(--background-light);
         text-align: center;
+        padding: 4rem 0;
     }
-    .content-section {
-        padding: 2rem;
-        background-color: var(--background-secondary);
+    
+    .hero-heading {
+        font-size: 3rem;
+        margin-bottom: 2rem;
     }
-    footer {
-        background-color: var(--tertiary-color);
-        color: var(--background-secondary);
-        text-align: center;
-        padding: 1rem;
+    
+    .cta-button {
+        display: inline-block;
+        background: var(--secondary-color);
+        color: var(--background-light);
+        padding: 0.75rem 1.5rem;
+        font-size: 1.25rem;
+        text-decoration: none;
+        border-radius: 2rem;
+        transition: background 0.3s ease;
     }
-    /* Responsive styling */
+    
+    .cta-button:hover {
+        background: var(--btn-hover);
+    }
+    
+    /* Add styles for other sections, footer, and responsive design */
+    
     @media (max-width: 768px) {
-        nav {
+        .nav-menu {
             flex-direction: column;
+            align-items: center;
         }
-        nav a {
-            margin: 0.5rem 0;
+        
+        .nav-item {
+            margin-bottom: 1rem;
+        }
+        
+        .hero {
+            padding: 2rem 0;
+        }
+        
+        .hero-heading {
+            font-size: 2rem;
         }
     }
 </style>
 </head>
 <body>
-<header>
-    <h1>Band Connect</h1>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Connect</a>
-        <a href="#">About Us</a>
-        <a href="#">Provider Login</a>
-    </nav>
-</header>
-<div class="hero">
-    <h2>Extending the high-quality in-clinic MSK rehabilitation experience into the patient's home.</h2>
-    <p>Band Connect provides a medical-grade and condition-specific platform that augments the clinician workflow by extending the in-clinic MSK rehabilitation experience into the patient's home - leading to higher quality personalized treatment and increased adherence with enhanced economics and reimbursement for the clinic.</p>
-</div>
-<div class="content-section">
-    <h3>The Problem</h3>
-    <p>Only 35% of physical therapy patients fully adhere to their plans of care. We can do better.</p>
-    <!-- Add more content sections as needed -->
-</div>
-<footer>
-    <p>Copyright © 2022 Band Connect Inc.</p>
-    <!-- Add your social media links -->
-</footer>
+    <header>
+        <div class="container">
+            <nav class="nav-bar">
+                <a href="#" class="nav-brand">Band Connect</a>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Connect</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Provider Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-heading">Extending the high-quality in-clinic MSK rehabilitation experience into the patient's home.</h1>
+            <a href="#" class="cta-button">Learn More</a>
+        </div>
+    </section>
+    <!-- Add sections for your content here -->
+    <footer>
+        <!-- Your footer content -->
+    </footer>
 </body>
 </html>
+
